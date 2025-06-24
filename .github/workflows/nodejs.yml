@@ -22,8 +22,8 @@ jobs:
       - name: Test Secret
       - run: echo ${{secrets.TEST_SECRET}}
         
-      # - name: Install depedencies
-      #   run: npm install
+      - name: Install depedencies
+        run: npm install
 
-      # - name: tes
-      #   run: node index.js
+      - name: tes
+        run: node index.js
