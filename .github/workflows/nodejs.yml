@@ -18,13 +18,16 @@ jobs:
         with:
           node-version: '22'
 
+      - name: tes
+        run: echo "hallo"
+
 
       # - name: Test Secret
       # - run: | 
       #     echo ${{secrets.TEST_SECRET}} | sed 's/./& /g'
         
-      - name: Install depedencies
-        run: npm install
+      # - name: Install depedencies
+      #   run: npm install
 
-      - name: tes
-        run: node index.js
+      # - name: tes
+      #   run: node index.js
