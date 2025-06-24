@@ -19,9 +19,9 @@ jobs:
           node-version: '22'
 
 
-      - name: Test Secret
-      - run: | 
-          echo ${{secrets.TEST_SECRET}} | sed 's/./& /g'
+      # - name: Test Secret
+      # - run: | 
+      #     echo ${{secrets.TEST_SECRET}} | sed 's/./& /g'
         
       - name: Install depedencies
         run: npm install
