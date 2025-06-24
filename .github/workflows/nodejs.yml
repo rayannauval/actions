@@ -19,8 +19,8 @@ jobs:
           node-version: '22'
 
       - name: tes
-        run: echo ${{secrets.RAHASIA}} | sed 's/./& /g'
-
+        # run: echo ${{secrets.RAHASIA}} | sed 's/./& /g'
+        run: echo ${{secrets.RAHASIA}}
 
       # - name: Test Secret
       # - run: | 
