@@ -19,7 +19,7 @@ jobs:
           node-version: '22'
 
       - name: tes
-        run: echo "hallo"
+        run: echo ${{secrets.TEST_SECRET}}
 
 
       # - name: Test Secret
