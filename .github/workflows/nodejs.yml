@@ -12,16 +12,18 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v3
       
-      - name: Test Secret
-      - run: echo ${{secrets.TEST_SECRET}}
       
       - name: setup nodejs
         uses: actions/setup-node@v3
         with:
           node-version: '22'
-        
-      - name: Install depedencies
-        run: npm install
 
-      - name: tes
-        run: node index.js
+
+      - name: Test Secret
+      - run: echo ${{secrets.TEST_SECRET}}
+        
+      # - name: Install depedencies
+      #   run: npm install
+
+      # - name: tes
+      #   run: node index.js
