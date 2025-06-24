@@ -1,0 +1,34 @@
+name: coba Nodejs
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+      
+      - name: Test Secret
+      - run: |
+          echo "Masked secret  :"
+          echo ${{secrets.TEST_SECRET}}
+          echo "\n"
+          echo "RAHASIA        :"
+          echo ${{secrets.RAHASIA}}
+          echo "infotoken      :"
+          echo ${{secrets.INFOTOKEN}}
+      
+      # - name: setup nodejs
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '22'
+        
+      # - name: Install depedencies
+      #   run: npm install
+
+      # - name: tes
+      #   run: node index.js
