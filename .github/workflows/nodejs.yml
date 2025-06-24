@@ -16,11 +16,6 @@ jobs:
       - run: |
           echo "Masked secret  :"
           echo ${{secrets.TEST_SECRET}}
-          echo "\n"
-          echo "RAHASIA        :"
-          echo ${{secrets.RAHASIA}}
-          echo "infotoken      :"
-          echo ${{secrets.INFOTOKEN}}
       
       - name: setup nodejs
         uses: actions/setup-node@v3
