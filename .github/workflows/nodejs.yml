@@ -1,8 +1,9 @@
 name: coba Nodejs
 
 on:
-  push:
-    branches: [ main ]
+  # push:
+  #   branches: [ main ]
+  workflow-dispatch:
 
 jobs:
   build:
@@ -18,16 +19,12 @@ jobs:
         with:
           node-version: '22'
 
-      - name: tes
-        run: echo ${{secrets.RAHASIA}} | sed 's/./&/g'
-        # run: echo ${{secrets.RAHASIA}}
-
-      # - name: Test Secret
-      # - run: | 
-      #     echo ${{secrets.TEST_SECRET}} | sed 's/./& /g'
-        
-      # - name: Install depedencies
-      #   run: npm install
-
       # - name: tes
-      #   run: node index.js
+      #   run: echo ${{secrets.RAHASIA}} | sed 's/./& /g'
+      #   # run: echo ${{secrets.RAHASIA}}
+        
+      - name: Install depedencies
+        run: npm install
+
+      - name: tes
+        run: node index.js
