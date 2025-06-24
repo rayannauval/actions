@@ -22,13 +22,13 @@ jobs:
           echo "infotoken      :"
           echo ${{secrets.INFOTOKEN}}
       
-      # - name: setup nodejs
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '22'
+      - name: setup nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
         
-      # - name: Install depedencies
-      #   run: npm install
+      - name: Install depedencies
+        run: npm install
 
-      # - name: tes
-      #   run: node index.js
+      - name: tes
+        run: node index.js
